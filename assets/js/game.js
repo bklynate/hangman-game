@@ -23,42 +23,49 @@ for(var i=0; i < chosenWordArr.length; i++) {
   displayArr.push(chosenWordArr[i].replace(chosenWordArr[i],"_"));
 }
 
-console.log(displayArr.join(" "));
+document.querySelector("#display").innerHTML = displayArr.join(" ");
 
 var maxCount = chosenWord.length;
 var count = 0;
+var guessesLeft = maxCount - count;
+document.querySelector("#guessesLeft").innerHTML = guessesLeft;
 
 console.log(chosenWord);
 
 document.onkeydown = function(event) {
+  var guessesLeft = maxCount - count;
+  document.querySelector("#guessesLeft").innerHTML = guessesLeft;
   function checkForWinner(){
     if(count === maxCount) {
       document.onkeydown = null
       if(displayArr.indexOf("_") !== -1) {
-        console.log("You Lose!");
+        document.querySelector("#winOrLose").innerHTML = "<h3>You Lose!</h3>";
       }
       if(displayArr.indexOf("_") === -1) {
-        console.log("You Won!");
+        document.querySelector("#winOrLose").innerHTML = "<h3>You Won!</h3>";
       }
     }
   }
 
   var keyPress = event.key;
-
   if(count !== maxCount) {
     for(var i=0; i < chosenWord.length; i++) {
       if(keyPress === chosenWord.charAt(i)) {
         count++
-        console.log("Correct!");
+        guessesLeft--
+        document.querySelector("#guessesLeft").innerHTML = guessesLeft;
+        document.querySelector("#guessOutcome").innerHTML = "Correct !";
         displayArr[i] = keyPress;
-        console.log(displayArr.join(" "));
+        document.querySelector("#display").innerHTML = displayArr.join(" ");
         checkForWinner();
       }
     }
 
     if(chosenWord.indexOf(keyPress) === -1) {
       count++
-      console.log("Wrong !");
+      guessesLeft--
+      document.querySelector("#guessesLeft").innerHTML = guessesLeft;
+      document.querySelector("#guessOutcome").innerHTML = "Wrong !";
       checkForWinner();
     }
   }
