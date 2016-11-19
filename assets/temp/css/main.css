@@ -104,18 +104,18 @@ hr {
 }
 /* WRAP SECTIONS */
 /* hello */
-#hello {
+#intro {
 	width: 100%;
 	padding-top: 250px;
 	padding-bottom: 250px;
 }
-#hello h1 {
+#intro h1 {
 	font-size: 90px;
 	font-weight: 700;
 	letter-spacing: 3px;
 	color: #74cfae;
 }
-#hello h2 {
+#intro h2 {
 	color: #c0c0c0;
 	font-weight: 400;
 }
