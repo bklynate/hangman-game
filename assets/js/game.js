@@ -25,25 +25,26 @@ for(var i=0; i < chosenWordArr.length; i++) {
 
 document.querySelector("#display").innerHTML = displayArr.join(" ");
 
-var maxCount = chosenWord.length;
+var maxCount = 12;
 var count = 0;
 var guessesLeft = maxCount - count;
 document.querySelector("#guessesLeft").innerHTML = guessesLeft;
 
-console.log("Spolier Alert: The word is - ", chosenWord);
+console.log("Spolier Alert: The word is ", chosenWord);
 
 document.onkeydown = function(event) {
   var guessesLeft = maxCount - count;
   document.querySelector("#guessesLeft").innerHTML = guessesLeft;
   function checkForWinner(){
-    if(count === maxCount) {
-      document.onkeydown = null
-      if(displayArr.indexOf("_") !== -1) {
+    if(displayArr.indexOf("_") !== -1) {
+      if(count === maxCount) {
+        document.onkeydown = null
         document.querySelector("#winOrLose").innerHTML = "<h3>You Lose!</h3>";
       }
-      if(displayArr.indexOf("_") === -1) {
-        document.querySelector("#winOrLose").innerHTML = "<h3>You Won!</h3>";
-      }
+    }
+    if(displayArr.indexOf("_") === -1) {
+      document.onkeydown = null
+      document.querySelector("#winOrLose").innerHTML = "<h3>You Won!</h3>";
     }
   }
 
