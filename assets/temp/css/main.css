@@ -123,13 +123,14 @@ hr {
 #green {
 	background-color: #74cfae;
 	padding-top: 90px;
-  padding-bottom: 100px;
+  padding-bottom: 200px;
 	margin-bottom: 0px;
 }
 #green h3 {
 	color: white;
 	font-weight: 400;
 	margin-bottom: 35px;
+  margin-top: 30px;
 }
 #green p {
 	color: white;
