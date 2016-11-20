@@ -13,7 +13,18 @@ var wordbank = [
   'deposit',
   'interest'
 ];
-
+var gameSounds = {
+	wrong: {
+		sound: new Howl({
+  		urls: ['sounds/moon.mp3']
+		})
+	},
+	right: {
+		sound: new Howl({
+  		urls: ['sounds/pinwheel.mp3']
+		})
+	}
+}
 var randomWordIndex = Math.floor(Math.random() * wordbank.length);
 var chosenWord = wordbank[randomWordIndex];
 var chosenWordArr = chosenWord.split("");
@@ -57,6 +68,7 @@ document.onkeydown = function(event) {
           guessesLeft--
           document.querySelector("#guessesLeft").innerHTML = guessesLeft;
           document.querySelector("#guessOutcome").innerHTML = "Correct !";
+          gameSounds.right.sound.play();
           displayArr[i] = keyPress;
           document.querySelector("#display").innerHTML = displayArr.join(" ");
           checkForWinner();
@@ -68,6 +80,7 @@ document.onkeydown = function(event) {
         guessesLeft--
         document.querySelector("#guessesLeft").innerHTML = guessesLeft;
         document.querySelector("#guessOutcome").innerHTML = "Wrong !";
+        gameSounds.wrong.sound.play();
         checkForWinner();
       }
     }
