@@ -123,6 +123,7 @@ a:after {
 	color: white;
 	font-weight: 400;
 	font-size: 20px;
+  line-height: 1px;
 }
 /* Display */
 #display {
