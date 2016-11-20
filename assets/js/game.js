@@ -23,7 +23,17 @@ var gameSounds = {
 		sound: new Howl({
   		urls: ['sounds/pinwheel.mp3']
 		})
-	}
+	},
+  winner: {
+    sound: new Howl({
+      urls: ['sounds/winner.mp3']
+    })
+  },
+  loser: {
+    sound: new Howl({
+      urls: ['sounds/loser.mp3']
+    })
+  }
 }
 var randomWordIndex = Math.floor(Math.random() * wordbank.length);
 var chosenWord = wordbank[randomWordIndex];
@@ -51,11 +61,13 @@ document.onkeydown = function(event) {
       if(count === maxCount) {
         document.onkeydown = null
         document.querySelector("#winOrLose").innerHTML = "<h3>You Lose!</h3>";
+        gameSounds.loser.sound.play();
       }
     }
     if(displayArr.indexOf("_") === -1) {
       document.onkeydown = null
       document.querySelector("#winOrLose").innerHTML = "<h3>You Won!</h3>";
+      gameSounds.winner.sound.play();
     }
   }
 
