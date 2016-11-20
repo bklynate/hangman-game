@@ -153,7 +153,7 @@ a:after {
 }
 #f p {
 	color: white;
-	text-align: right;
+	text-align: center;
 	font-weight: 400;
 }
 /* Image Opacity */
@@ -168,5 +168,14 @@ and (max-width : 767px) {
   .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
   	color: #74cfae;
   	background-color: #ffffff;
+  }
+}
+@media only screen
+and (max-width : 457px) {
+  #intro h1 {
+  	font-size: 70px;
+  	font-weight: 700;
+  	letter-spacing: 3px;
+  	color: #74cfae;
   }
 }
