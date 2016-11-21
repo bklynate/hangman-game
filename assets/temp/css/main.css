@@ -88,6 +88,16 @@ a:after {
 .github-repo-text {
   color: #999;
 }
+#tagline {
+  margin-bottom: 60px;
+}
+#playGameBtn {
+  color: #fff;
+  background-color: #74cfae;
+  padding: 15px;
+  font-size: 20px;
+  font-weight: 400;
+}
 /* WRAP SECTIONS */
 /* hello */
 #intro {
@@ -123,6 +133,12 @@ a:after {
 	font-weight: 400;
 	font-size: 20px;
   line-height: 1px;
+}
+#instructions {
+  margin-top: 90px;
+  margin-bottom: -80px;
+  text-transform: uppercase;
+  font-weight: 900;
 }
 /* Display */
 #display {

@@ -13,6 +13,7 @@ var wordbank = [
   'deposit',
   'interest'
 ];
+
 var gameSounds = {
 	wrong: {
 		sound: new Howl({
@@ -35,6 +36,7 @@ var gameSounds = {
     })
   }
 }
+
 var randomWordIndex = Math.floor(Math.random() * wordbank.length);
 var chosenWord = wordbank[randomWordIndex];
 var chosenWordArr = chosenWord.split("");

@@ -47,15 +47,17 @@
     	<div class="row">
     		<div class="col-lg-8 col-lg-offset-2 centered">
     			<h1>Bankman</h1>
-    			<h2>The Banking Inspired Hangman Game</h2>
+    			<h2 id="tagline">The Banking Inspired Hangman Game</h2>
+          <p><a href="#game" id="playGameBtn">Play Bankman</a></p>
     		</div><!-- /col-lg-8 -->
     	</div><!-- /row -->
     </div> <!-- /container -->
 	</div><!-- /intro -->
 
   <!-- Green display section -->
+  <section id="game"></section>
 	<div id="green">
-		<div class="container-fluid">
+		<div class="container">
 			<div class="row">
 				<div class="col-lg-5 centered">
 					<div id="display">
@@ -67,6 +69,7 @@
 					<span id="winOrLose"><h3>TAKE A GUESS ? <span id="guessOutcome"></span></h3></span>
 					<p>Guess the correct letters in the word. </p>
           <p>You only have <span id="guessesLeft"></span> guess(es)</p>
+          <p id="instructions">press on the keyboard to begin.</p>
 				</div>
 			</div>
 		</div>
