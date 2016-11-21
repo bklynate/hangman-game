@@ -240,6 +240,6 @@ and (max-width : 457px) {
 @media only screen
 and (max-width : 396px) {
   #instructions {
-  	font-size: 16px;
+  	font-size: 10px;
   }
 }
