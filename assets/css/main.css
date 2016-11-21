@@ -239,10 +239,7 @@ and (max-width : 457px) {
 
 @media only screen
 and (max-width : 396px) {
-  #intro h1 {
+  #instructions {
   	font-size: 16px;
-  	font-weight: 700;
-  	letter-spacing: 3px;
-  	color: #74cfae;
   }
 }
