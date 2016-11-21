@@ -58,19 +58,28 @@ console.log("Spolier Alert: The word is ", chosenWord);
 document.onkeydown = function(event) {
   var guessesLeft = maxCount - count;
   document.querySelector("#guessesLeft").innerHTML = guessesLeft;
-  function checkForWinner(){
+  function checkForWinner() {
     if(displayArr.indexOf("_") !== -1) {
       if(count === maxCount) {
         document.onkeydown = null
         document.querySelector("#winOrLose").innerHTML = "<h3>You Lose!</h3>";
         gameSounds.loser.sound.play();
+        restartGame();
       }
     }
+
     if(displayArr.indexOf("_") === -1) {
       document.onkeydown = null
       document.querySelector("#winOrLose").innerHTML = "<h3>You Won!</h3>";
       gameSounds.winner.sound.play();
+      restartGame();
     }
+  }
+
+  function restartGame() {
+    setTimeout(function() {
+      location.reload()
+    }, 5000);
   }
 
   if(event.keyCode >= 65 && event.keyCode <= 90) {
