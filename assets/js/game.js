@@ -79,7 +79,7 @@ document.onkeydown = function(event) {
   function restartGame() {
     setTimeout(function() {
       location.reload()
-    }, 5000);
+    }, 2300);
   }
 
   if(event.keyCode >= 65 && event.keyCode <= 90) {
