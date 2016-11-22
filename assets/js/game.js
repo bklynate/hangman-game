@@ -41,6 +41,7 @@ var randomWordIndex = Math.floor(Math.random() * wordbank.length);
 var chosenWord = wordbank[randomWordIndex];
 var chosenWordArr = chosenWord.split("");
 var displayArr = [];
+var lettersPickedByUser = [];
 
 for(var i=0; i < chosenWordArr.length; i++) {
   displayArr.push(chosenWordArr[i].replace(chosenWordArr[i],"_"));
@@ -99,8 +100,10 @@ document.onkeydown = function(event) {
       }
 
       if(chosenWord.indexOf(keyPress) === -1) {
-        count++
-        guessesLeft--
+        count++;
+        guessesLeft--;
+        lettersPickedByUser.push(keyPress);
+        document.querySelector("#pickedLettersArr").innerHTML = lettersPickedByUser;
         document.querySelector("#guessesLeft").innerHTML = guessesLeft;
         document.querySelector("#guessOutcome").innerHTML = "Wrong !";
         gameSounds.wrong.sound.play();

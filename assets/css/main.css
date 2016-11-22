@@ -43,7 +43,7 @@ p {
 
 /* Links */
 a {
-  color: #f85c37;
+  color: #fff;
   word-wrap: break-word;
   -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
   -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
@@ -175,8 +175,14 @@ a:after {
 #display {
   margin-top: 50px;
   font-size: 50px;
+  margin-bottom: 30px;
 }
 
+#pickedLettersArr {
+  padding: 0;
+  margin: 0;
+  font-size: 30px;
+}
 /* Social Links */
 #social {
   background-color: #4e4e4e;
