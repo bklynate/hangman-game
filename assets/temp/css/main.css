@@ -195,3 +195,9 @@ and (max-width : 457px) {
   	color: #74cfae;
   }
 }
+@media only screen
+and (max-width : 396px) {
+  #instructions p {
+  	font-size: 16px;
+  }
+}
