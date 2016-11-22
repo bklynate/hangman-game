@@ -146,6 +146,10 @@ a:after {
   font-size: 50px;
   margin-bottom: 30px;
 }
+#picked-header {
+  text-decoration: underline;
+  padding-bottom: -80px;
+}
 #pickedLettersArr {
   padding: 0;
   margin: 0;

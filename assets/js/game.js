@@ -103,7 +103,7 @@ document.onkeydown = function(event) {
         count++;
         guessesLeft--;
         lettersPickedByUser.push(keyPress);
-        document.querySelector("#pickedLettersArr").innerHTML = lettersPickedByUser;
+        document.querySelector("#pickedLettersArr").innerHTML = lettersPickedByUser.join(" ");
         document.querySelector("#guessesLeft").innerHTML = guessesLeft;
         document.querySelector("#guessOutcome").innerHTML = "Wrong !";
         gameSounds.wrong.sound.play();
