@@ -141,6 +141,10 @@ a:after {
   font-weight: 900;
 }
 /* Display */
+#page-top {
+  position: absolute;
+  top: 0;
+}
 #display {
   margin-top: 50px;
   font-size: 50px;
