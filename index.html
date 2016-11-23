@@ -15,6 +15,7 @@
     <!-- JavaScript Files -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/1.1.29/howler.js"></script>
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -31,7 +32,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#"><i class="fa fa-bank"></i></a>
+        <a class="navbar-brand" href="#page-top"><i class="fa fa-bank"></i></a>
       </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
@@ -40,7 +41,7 @@
       </div><!--/.nav-collapse -->
     </div>
   </div> <!-- end of navbar div -->
-
+  <section id="page-top"></section>
   <!-- start of intro header -->
 	<div id="intro">
     <div class="container">
@@ -63,6 +64,10 @@
 					<div id="display">
 
 					</div>
+          <div id="pickedLetters">
+            <h3 id="picked-header">Wrong Guesses</h3>
+            <p>[ - <span id="pickedLettersArr"></span> - ]</p>
+          </div>
 				</div>
 
 				<div class="col-lg-7 centered">

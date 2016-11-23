@@ -43,7 +43,7 @@ p {
 
 /* Links */
 a {
-  color: #f85c37;
+  color: #fff;
   word-wrap: break-word;
   -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
   -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
@@ -143,6 +143,11 @@ a:after {
 }
 
 /* Green */
+#game {
+  position: absolute;
+  bottom: 25px;
+}
+
 #green {
 	background-color: #74cfae;
 	padding-top: 90px;
@@ -172,11 +177,24 @@ a:after {
 }
 
 /* Display */
+#page-top {
+  position: absolute;
+  top: 0;
+}
 #display {
   margin-top: 50px;
   font-size: 50px;
+  margin-bottom: 30px;
 }
-
+#picked-header {
+  text-decoration: underline;
+  padding-bottom: -80px;
+}
+#pickedLettersArr {
+  padding: 0;
+  margin: 0;
+  font-size: 30px;
+}
 /* Social Links */
 #social {
   background-color: #4e4e4e;
@@ -208,7 +226,6 @@ a:after {
 	color: white;
 	text-align: center;
 	font-weight: 400;
-  padding-right: 55px;
 }
 
 /* Image Opacity */
@@ -239,7 +256,21 @@ and (max-width : 457px) {
 
 @media only screen
 and (max-width : 396px) {
+  #instructions {
+  	font-size: 16px !important;
+  }
+}
+
+@media only screen
+and (max-width : 320px) {
+  #intro h1 {
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #74cfae;
+  }
+
   #green p {
-  	font-size: 16px;
+    font-size: 17.5px;
   }
 }

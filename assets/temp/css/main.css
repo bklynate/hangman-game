@@ -37,7 +37,7 @@ p {
 }
 /* Links */
 a {
-  color: #f85c37;
+  color: #fff;
   word-wrap: break-word;
   -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
   transition: color 0.1s ease-in, background 0.1s ease-in;
@@ -116,6 +116,10 @@ a:after {
 	font-weight: 400;
 }
 /* Green */
+#game {
+  position: absolute;
+  bottom: 25px;
+}
 #green {
 	background-color: #74cfae;
 	padding-top: 90px;
@@ -141,9 +145,23 @@ a:after {
   font-weight: 900;
 }
 /* Display */
+#page-top {
+  position: absolute;
+  top: 0;
+}
 #display {
   margin-top: 50px;
   font-size: 50px;
+  margin-bottom: 30px;
+}
+#picked-header {
+  text-decoration: underline;
+  padding-bottom: -80px;
+}
+#pickedLettersArr {
+  padding: 0;
+  margin: 0;
+  font-size: 30px;
 }
 /* Social Links */
 #social {
@@ -171,7 +189,6 @@ a:after {
 	color: white;
 	text-align: center;
 	font-weight: 400;
-  padding-right: 55px;
 }
 /* Image Opacity */
 .grid img {
@@ -198,7 +215,25 @@ and (max-width : 457px) {
 }
 @media only screen
 and (max-width : 396px) {
+<<<<<<< HEAD
   #green p {
   	font-size: 16px;
+=======
+  #instructions {
+  	font-size: 16px !important;
+  }
+}
+@media only screen
+and (max-width : 320px) {
+  #intro h1 {
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #74cfae;
+  }
+
+  #green p {
+    font-size: 17.5px;
+>>>>>>> a0adb7a654fe04b20e346ee7e11d2b9f2989463b
   }
 }
