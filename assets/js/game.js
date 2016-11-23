@@ -117,6 +117,7 @@ $(document).ready(function(){
         if(chosenWord.indexOf(keyPress) === -1) {
           count++;
           guessesLeft--;
+          $("#display").effect('shake', 100)
           lettersPickedByUser.push(keyPress);
           document.querySelector("#pickedLettersArr").innerHTML = lettersPickedByUser.join(" ");
           document.querySelector("#guessesLeft").innerHTML = guessesLeft;
