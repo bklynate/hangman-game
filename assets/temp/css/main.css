@@ -116,6 +116,10 @@ a:after {
 	font-weight: 400;
 }
 /* Green */
+#game {
+  position: absolute;
+  bottom: 25px;
+}
 #green {
 	background-color: #74cfae;
 	padding-top: 90px;

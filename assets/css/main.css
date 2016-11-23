@@ -143,6 +143,11 @@ a:after {
 }
 
 /* Green */
+#game {
+  position: absolute;
+  bottom: 25px;
+}
+
 #green {
 	background-color: #74cfae;
 	padding-top: 90px;
