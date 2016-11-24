@@ -31,22 +31,26 @@ var wordbank = [
 var gameSounds = {
 	wrong: {
 		sound: new Howl({
-  		urls: ['sounds/moon.mp3']
+  		urls: ['sounds/moon.mp3'],
+      volume: 0.1
 		})
 	},
 	right: {
 		sound: new Howl({
-  		urls: ['sounds/pinwheel.mp3']
+  		urls: ['sounds/pinwheel.mp3'],
+      volume: 0.1
 		})
 	},
   winner: {
     sound: new Howl({
-      urls: ['sounds/winner.mp3']
+      urls: ['sounds/winner.mp3'],
+      volume: 0.1
     })
   },
   loser: {
     sound: new Howl({
-      urls: ['sounds/loser.mp3']
+      urls: ['sounds/loser.mp3'],
+      volume: 0.1
     })
   }
 }
@@ -80,6 +84,7 @@ $(document).ready(function(){
           document.onkeydown = null
           document.querySelector("#winOrLose").innerHTML = "<h3>You Lose!</h3>";
           gameSounds.loser.sound.play();
+          $("#display").effect('explode', 1000)
           restartGame();
         }
       }
@@ -88,6 +93,7 @@ $(document).ready(function(){
         document.onkeydown = null
         document.querySelector("#winOrLose").innerHTML = "<h3>You Won!</h3>";
         gameSounds.winner.sound.play();
+        $("#display").effect('explode', 1000)
         restartGame();
       }
     }
@@ -117,6 +123,7 @@ $(document).ready(function(){
         if(chosenWord.indexOf(keyPress) === -1) {
           count++;
           guessesLeft--;
+          // $("#display").effect('shake', 100)
           $("#display").effect('shake', 100)
           lettersPickedByUser.push(keyPress);
           document.querySelector("#pickedLettersArr").innerHTML = lettersPickedByUser.join(" ");
